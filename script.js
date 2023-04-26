@@ -4,7 +4,7 @@ let btn = document.getElementById('time')
 
 function calcul1(){
 	var today = new Date();
-	let jour = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"]
+	let jour = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
 	let mois = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
 	var date = 'Nous sommes le : '+ jour[today.getDay()]+ " " +today.getDate()+ " " +mois[(today.getMonth())]+ " " +today.getFullYear();
 	alert(date);
