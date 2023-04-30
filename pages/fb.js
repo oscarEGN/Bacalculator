@@ -1,9 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp  } from "firebase/app";
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set, onValue, get, child} from "firebase/database";
-import * as Crypto from 'crypto-js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js'
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+import { getDatabase, ref, set, onValue, get, child} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+//import * as Crypto from 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -56,7 +55,7 @@ function register(){
         fullname: full_name.value,
         username: username.value,
         email: email.value,
-        password: encPass()
+        password: password.value
       })
       .then(()=>{
         alert("Utilisateur créé");
@@ -102,15 +101,15 @@ function Validation(){
   return true
 }
 
-function encPass(){
-  var pass12 = Crypto.AES.encrypt(password.value, password.value)
-  return pass12.toString()
-}
+//function encPass(){
+  //var pass12 = Crypto.AES.encrypt(password.value, password.value)
+  //return pass12.toString()
+//}
 
-function decPass(dbpass){
-  var pass12 = Crypto.AES.decrypt(dbpass, logPassword.value)
-  return pass12.toString(Crypto.enc.Utf8)
-}
+//function decPass(dbpass){
+  //var pass12 = Crypto.AES.decrypt(dbpass, logPassword.value)
+  //return pass12.toString(Crypto.enc.Utf8)
+//}
 
 function login(user){
   let keepLoggedIn = document.getElementById("checkbox-circle2").checked;

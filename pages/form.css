@@ -19,8 +19,8 @@ body {
 
 
 input {
-	color: #8707ff;
-	border: 2px solid #8707ff;
+	color: rgba(68, 62, 255, 0.711);
+	border: 2px solid rgba(68, 62, 255, 0.711);
 	border-radius: 10px;
 	padding: 10px 25px;
 	background: transparent;
@@ -28,7 +28,7 @@ input {
 }
 
 input:active {
-	box-shadow: 2px 2px 15px #8707ff inset;
+	box-shadow: 2px 2px 15px rgba(68, 62, 255, 0.711) inset;
 }
 
 #class{

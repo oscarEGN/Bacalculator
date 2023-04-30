@@ -3,12 +3,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #c850c0;
 	background-attachment:fixed;
 	background-origin: initial;
 	background-repeat: no-repeat;
 	height:100%;
-	background-image: linear-gradient(43deg, #4158D0 0%, #c850c0 46%, #FFCC70 100%);
+	background: rgb(212,212,212);
+	background: linear-gradient(90deg, rgba(212,212,212,1) 0%, rgba(255,255,255,1) 100%);
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -21,8 +21,8 @@ body {
 
 
 input {
-	color: #8707ff;
-	border: 2px solid #8707ff;
+	color: rgba(68, 62, 255, 0.711);
+	border: 2px solid rgba(68, 62, 255, 0.711);
 	border-radius: 10px;
 	padding: 10px 25px;
 	background: transparent;
@@ -30,7 +30,7 @@ input {
 }
 
 input:active {
-	box-shadow: 2px 2px 15px #8707ff inset;
+	box-shadow: 2px 2px 15px rgba(68, 62, 255, 0.711) inset;
 }
 
 #class{
@@ -56,7 +56,7 @@ input:active {
 	flex-direction: column;
 	align-items: center;
 	border-radius: 48px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(68, 62, 255, 0.711);
 	border-radius: 10px;
 	box-shadow:  -7px -7px 34px #565656,
              7px 7px 34px #767676;
@@ -111,7 +111,7 @@ h1 a {
 .nav_list a {
   text-decoration: none;
   font-size: 50px;
-  color: #fff;
+  color: rgb(67, 67, 67);
 }
 
 .nav_list_item {
@@ -135,7 +135,7 @@ h1 a {
   width: 0px;
   left: 0;
   bottom: 10px;
-  background: #BF2E97; 
+  background: rgba(68, 62, 255, 0.711); 
   transition: all .5s ease;
 }
 
@@ -160,8 +160,8 @@ h1 a {
   font-size: 30px;
   align-items: center;
   justify-content: center;
-  background-color: #BF2E97;
-  color: #fff;
+  background-color: rgba(68, 62, 255, 0.711);
+  color: black;
   content: "×";
   cursor: pointer;
   opacity: 0; 
@@ -239,15 +239,6 @@ h1 a {
 	  filter: hue-rotate(180deg);
 	}
   }
-  
-
-#notes, #general {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: center;
-	margin-bottom: 1em;
-}
 
 #general .texte{
 	padding:2em;
@@ -266,74 +257,75 @@ h1 a {
 	width: 100%;
 }
 
-.bulletins, .e_t{
-	display: flex;
-	flex-direction: column;
-	margin: 0.5em 0;
-	padding: 1em 2em;
-	justify-content: space-evenly;
-	border-radius: 1em;
-	border-radius: 57px;
-}
-
-.texte{
-	text-align: center;
-}
-
-.bulletins {
-	border-radius: 25px;
-}
-
-.e_t {
-	margin-top: 35px;
-	border-radius: 25px;
-	background-color: rgba(26, 206, 194, 1);
-	backdrop-filter: blur(14px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-
-#premiere, #terminale  {
-	margin: 0 4em;
-	
-	padding:0;
-	border-radius:2em;
-	border-radius: 5px;
-    border-radius: 57px;
-	border-radius: 48px;
-	border-radius: 48px;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 47px;
-	box-shadow:  -7px -7px 34px #565656,
-             7px 7px 34px #767676;
-	text-align: center;
-}
-
-#premiere {
-	margin-left: 0px;
-}
-
-#terminale {
-	margin-right: 0px;
-}
-
 input {
 	margin:0.5em;
 	width:5em;
 }
 
-button {
-	margin:0.5em;
-	padding:0.5em;
-	font-size: 2em;
-	font-weight: bold;
-	text-align: center;
-	background-color: #fff;
-	color: rgb(120,0,0);
-	border-radius: 0.5em;
+section {
+	display: flex;
 }
 
-button:hover{
-	color: #fff;
-	background-color: rgb(120,0,0);
-}
+.button {
+	position: relative;
+	background-color: #333;
+	color: #e8e8e8;
+	font-size: 17px;
+	font-weight: 600;
+	width: 150px;
+	height: 60px;
+	border-radius: 50em;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button::before {
+	content: "Hello!";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-radius: 50em;
+	background: linear-gradient(135deg,#7b4397,#dc2430 );
+	transform: translate(-100%, 0%);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button::after {
+	content: "Hover me";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-radius: 50em;
+	transform: translate(0%,-100%);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+	transform: translate(0%, 0%);
+  }
+  
+  .button:hover::after {
+	transform: translate(100%,-100%);
+  }
+  
+  .button:focus {
+	outline: none;
+  }
+  
+  .button:active {
+	scale: 0.95;
+  }
+  
+  
+  
