@@ -1,0 +1,84 @@
+#general
+{
+    margin: 10px;
+    background-color:#e0cdbe;
+    border-radius: 20px;
+    height: max-content;
+    padding: 30px;
+}
+
+#box-g{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    background-color: black;
+    align-self: center;
+
+}
+
+#box1{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(16, 190, 0) ;
+    border-radius: 30px; 
+    width: 50%;
+}
+
+#box2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 30px;
+    background-color: red;    
+}
+
+#Nom
+{
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 30px;   
+    
+    
+}
+
+#body-g
+{
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 30px; 
+    width: 70%;
+    
+
+}
+
+
+
+img{
+    margin:30px;
+    border-radius: 30px;
+    width: 200.75px;
+    height: 224.5px;
+}
+
+li{
+    font-size: large;
+    
+}
+
+h1{
+
+    margin: 30px;
+    font-size: 100px;
+    text-align: center;
+}
+
+h3{
+    
+    font-family:"Norwester", sans-serif;
+}
+
+
+@font-face {
+	font-family: 'Norwester';
+	src: url("norwester.regular.otf") format(".otf");
+}
+
