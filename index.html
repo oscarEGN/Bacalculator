@@ -8,7 +8,7 @@
 		
 		<title>Bacalc</title>
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="pages/style.css" />
 		<title>Ma note au Bac</title>
 
 	</head>
@@ -16,6 +16,7 @@
 	<body>
 		
 	<div id="all">
+		<div id="general">
 		<div id="head">
 			<header>
 				<h1>Bacalculator | Ma note au Bac</h1>
@@ -78,18 +79,38 @@
 				<div id="general">
 					<div class="texte">
 						<h3>Calculez votre note dans la rubrique moyenne, <br> connectez-vous ou creez vous un compte sur la rubrique compte. 
-							Puis contactez nous i besoin sur la rubrique contact</h3>
+							Puis contactez nous si besoin sur la rubrique contact. <br>
+							 Changez le theme du site avec les bouttons ci-dessous</h3>
+						<div id="butt">
+						<button class="tooltip1" onclick="
+						document.documentElement.style.setProperty('--mainbg', 'linear-gradient(rgb(120,115,253) 0%, rgb(207,109,249) 50%, rgb(255,92,178) 100%)');
+						document.documentElement.style.setProperty('--mainbutton', 'white')">
+							<div id="colorChangeWhite"></div>
+						</button>
+						<button class="tooltip2" onclick="
+						document.documentElement.style.setProperty('--mainbg', 'linear-gradient(90deg, rgba(212,212,212,1) 0%, rgba(255,255,255,1) 100%)');
+						document.documentElement.style.setProperty('--mainbutton', 'rgba(68, 62, 255, 0.711)')">
+							<div id="colorChangeWhite"></div>
+						</button>
+						<button class="tooltip3" onclick="
+						document.documentElement.style.setProperty('--mainbg', 'linear-gradient(to right, #7474bf, #348ac7)');
+						document.documentElement.style.setProperty('--mainbutton', 'white')">
+							<div id="colorChangeWhite"></div>
+						</button>
+						<button class="tooltip4" onclick="
+						document.documentElement.style.setProperty('--mainbg', 'linear-gradient(to right, #11998e, #38ef7d)');
+						document.documentElement.style.setProperty('--mainbutton', 'white')">
+							<div id="colorChangeWhite"></div>
+						</button>
+					</div>
 						</div>
 					</div>
+					
 				</div>
 
 			</div>
-			
-
 		</div>
-
-		
-	<script type="text/javascript" src="script.js"></script>	
+	<script type="text/javascript" src="pages/script.js"></script>	
 	</body>
 
 </html>
