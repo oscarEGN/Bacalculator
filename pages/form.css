@@ -1,9 +1,4 @@
-:root {
-    --primary-bg-color: linear-gradient(90deg, rgba(212,212,212,1) 0%, rgba(255,255,255,1) 100%);
-    --secondary-bg-color: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-	--primary-color: rgba(68, 62, 255, 0.814);
-    --secondary-color: linear-gradient(230deg, rgba(120,115,253,1) 0%, rgba(207,109,249,1) 50%, rgba(255,92,178,1) 100%);
-}
+@import url("style.css");
 
 body {
 	
@@ -11,7 +6,7 @@ body {
 	background-origin: initial;
 	background-repeat: no-repeat;
 	height:100%;
-	background-color: var(--primary-bg-color);
+	background-color: linear-gradient(rgb(120,115,253) 0%, rgb(207,109,249) 50%, rgb(255,92,178) 100%);
 	font-family: 'Montserrat', sans-serif;
 }
 

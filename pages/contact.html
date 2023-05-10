@@ -1,87 +1,57 @@
 <!DOCTYPE html>
-
-
 <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contactez-nous</title>
+</head>
+<body>
+    <div id="retour"><a onclick="javascript:history.back()">Retour</a></div>
+    <div class="container">
+    <form action="https://postmail.invotes.com/send"
+    method="post" id="contact">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		
-		<title>Bacalc | Contact</title>
-		<link rel="stylesheet" type="text/css" href="contact.css">
+    <input type="text" name="subject" placeholder="Objet" />
+    <textarea name="text" placeholder="Message"></textarea>
+    <input type="hidden" name="access_token" value="nujiw1t3xjmdoukh6iducytw" />
+      <!-- return urls can be fully qualified -OR-
+         start with / for root relative -OR-
+         start with . for url relative --> 
+    <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+    <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+   
 
-	</head>
+    <!-- set the reply-to address -->
+    <!-- <input type="text" name="reply_to"
+                placeholder="Your Email" /> -->
 
-	<body>
-		<div class="container">  
-      <form id="contact">
-        <h3>Contact de Bacalc</h3>
-        <h4>Contactez-nous pour toute demande.</h4>
-        <fieldset>
-          <input name="name" id="name" placeholder="Votre Nom" type="text" tabindex="1" required autofocus>
-        </fieldset>
-        <fieldset>
-          <input name="email" id="email" placeholder="Votre adresse mail" type="email" tabindex="2" required>
-        </fieldset>
-        <fieldset>
-          <input name="phone" placeholder="Votre numero de téléphone (optional)" type="tel" tabindex="3" required>
-        </fieldset>
-        <fieldset>
-          <textarea name="message" id="message" placeholder="Tapez votres message ici ..." tabindex="5" required></textarea>
-        </fieldset>
-        <fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyez</button>
-        </fieldset>
-      </form>
-    </div>
-  <script>
-    const sendgrid = require('../@sendgrid/mail')
-    document.getElementById('contact').addEventListener('submit', function(event) {
-      event.preventDefault(); // Empêche la soumission du formulaire
+    <!-- to append extra fields, use the extra_ prefix.
+        Entries will be appended to your message body. -->
+    <input type="text" name="extra_phone_number"
+                placeholder="Phone Number" />
+    <input type="text" name="extra_name"
+                placeholder="Votre Nom" />
 
-      // Récupération des valeurs du formulaire
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var phone = document.getElementById('phone').value;
-      var message = document.getElementById('message').value;
-
-      // Construction de l'objet e-mail
-      var emailData = {
-        to: 'bacalculator.contact@gmail.com', // Remplacez par votre adresse e-mail destinataire
-        from: email,
-        subject: 'Nouveau message de contact',
-        text: 'Nom: ' + name + '\nEmail: ' + email + '\nMessage: ' + message
-      };
-
-      // Envoi de l'e-mail via l'API SendGrid
-      sendEmail(emailData);
+    <!-- to split your message into 160 chars
+         for an sms gateway -->
+    <!-- <input type="hidden"
+                name="sms_format" value="true" /> -->
+   
+    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyez</button>
+</form></div>
+     
+<!-- optional, prevents the submit button from being pressed more than once -->
+<script>
+    var submitButton = document.getElementById("contact-submit");
+    var form = document.getElementById("contact");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
     });
-
-    function sendEmail(emailData) {
-      var sendGridAPIKey = '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'; // Remplacez par votre clé API SendGrid
-
-      sendgrid.send(emailData, function(error, body) {
-        if (error) {
-          console.log('Une erreur s\'est produite lors de l\'envoi de l\'e-mail:', error);
-          alert('Une erreur s\'est produite lors de l\'envoi de l\'e-mail.');
-        } else {
-          console.log('E-mail envoyé avec succès!');
-          alert('E-mail envoyé avec succès!');
-          document.getElementById('contactForm').reset();
-        }
-      });
-    }
-  </script>
-    
-	</body>
+</script> 
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
