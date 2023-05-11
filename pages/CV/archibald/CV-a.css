@@ -116,3 +116,20 @@ img{
 	font-family: 'Roboto';
 	src: url("Bacalculator-main-1\Bacalculator-main\CV gabriel\roboto") format(".ttf");
 }
+
+#retour{
+    border-radius: 10px;
+    box-shadow:  -7px -7px 34px #565656,
+             7px 7px 34px #767676;
+    background-color: white;
+    width: max-content;
+    padding: 10px 18px;
+	color: black;
+	align-self: left;
+	margin-left: 15px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+#retour1{
+	align-items: left;
+}

@@ -14,7 +14,7 @@
     method="post" id="contact">
 
     <input type="text" name="subject" placeholder="Objet" />
-    <textarea name="text" placeholder="Message"></textarea>
+    
     <input type="hidden" name="access_token" value="nujiw1t3xjmdoukh6iducytw" />
       <!-- return urls can be fully qualified -OR-
          start with / for root relative -OR-
@@ -26,13 +26,13 @@
     <!-- set the reply-to address -->
     <!-- <input type="text" name="reply_to"
                 placeholder="Your Email" /> -->
-
+    <input type="text" name="extra_name"
+                    placeholder="Votre Nom" />
     <!-- to append extra fields, use the extra_ prefix.
         Entries will be appended to your message body. -->
     <input type="text" name="extra_phone_number"
-                placeholder="Phone Number" />
-    <input type="text" name="extra_name"
-                placeholder="Votre Nom" />
+                placeholder="Numéro de téléphone" />
+    <textarea name="text" placeholder="Message"></textarea>
 
     <!-- to split your message into 160 chars
          for an sms gateway -->
