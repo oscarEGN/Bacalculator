@@ -114,7 +114,7 @@ function calcul2() {
 
 
 	let noteBAC = (moyenneEMC1+moyenneEMCT1+moyenneEPST1+moyenneES1+moyenneEST1+moyenneHG1+moyenneHGT1+moyenneLVA1+moyenneLVAT1+moyenneLVB1+moyenneLVBT1+moyenneSPEP1+francaisEcrit+francaisOral+Philo+Spe1+Spe2+grandoral)/100;
-	let notefinale = document.getElementById("note_finale");
+	let notefinale = document.getElementById("note_finale").toFixed(1);
 	notefinale.innerHTML = noteBAC;
 
 }
